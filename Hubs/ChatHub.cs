@@ -8,5 +8,9 @@ namespace SignalR.Hubs
         {
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
+        public async Task userLogged(string userLogged)
+        {
+            await Clients.All.SendAsync("userEntered", userLogged);
+        }
     }
 }
